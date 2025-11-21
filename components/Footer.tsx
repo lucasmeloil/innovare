@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { Instagram, Facebook, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black pt-16 pb-8 border-t border-white/10">
+    <footer className="bg-black pt-16 pb-24 md:pb-8 border-t border-white/10 relative z-10">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center mb-12">
            <h2 className="font-serif text-3xl text-white tracking-wider mb-2">INNOVARE</h2>
@@ -32,13 +33,22 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-neutral-600 font-light">
+        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-neutral-600 font-light mb-8">
           <p>&copy; {new Date().getFullYear()} Innovare Jóias. Todos os direitos reservados.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-neutral-400 transition-colors">Política de Privacidade</a>
             <span className="text-neutral-800">|</span>
             <a href="#" className="hover:text-neutral-400 transition-colors">Termos de Uso</a>
           </div>
+        </div>
+
+        {/* Developer Credits */}
+        <div className="border-t border-white/5 pt-6 flex justify-center text-center">
+          <p className="text-[10px] text-neutral-700 uppercase tracking-widest font-medium flex flex-col md:flex-row gap-2 md:gap-0 items-center">
+            <span>CRIADO POR <a href="https://www.nexussofttech.com.br" target="_blank" rel="noopener noreferrer" className="text-gold-600/60 hover:text-gold-400 transition-colors font-bold ml-1">NEXUS SOFT TECH</a></span>
+            <span className="hidden md:inline mx-2 opacity-30">|</span>
+            <a href="https://www.nexussofttech.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-500 transition-colors tracking-wider">WWW.NEXUSSOFTTECH.COM.BR</a>
+          </p>
         </div>
       </div>
     </footer>
